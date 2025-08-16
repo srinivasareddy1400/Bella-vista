@@ -1,0 +1,135 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: hsl(47, 100%, 97%);
+  --foreground: hsl(25, 51%, 27%);
+  --card: hsl(47, 100%, 97%);
+  --card-foreground: hsl(25, 51%, 27%);
+  --popover: hsl(47, 100%, 97%);
+  --popover-foreground: hsl(25, 51%, 27%);
+  --primary: hsl(15, 41%, 50%);
+  --primary-foreground: hsl(47, 100%, 97%);
+  --secondary: hsl(25, 51%, 27%);
+  --secondary-foreground: hsl(47, 100%, 97%);
+  --muted: hsl(47, 20%, 90%);
+  --muted-foreground: hsl(25, 51%, 27%);
+  --accent: hsl(47, 100%, 97%);
+  --accent-foreground: hsl(15, 41%, 50%);
+  --destructive: hsl(0, 84%, 60%);
+  --destructive-foreground: hsl(47, 100%, 97%);
+  --border: hsl(15, 41%, 85%);
+  --input: hsl(47, 30%, 95%);
+  --ring: hsl(15, 41%, 50%);
+  --chart-1: hsl(15, 41%, 50%);
+  --chart-2: hsl(78, 26%, 58%);
+  --chart-3: hsl(51, 93%, 57%);
+  --chart-4: hsl(78, 26%, 58%);
+  --chart-5: hsl(15, 41%, 50%);
+  --sidebar: hsl(47, 100%, 97%);
+  --sidebar-foreground: hsl(25, 51%, 27%);
+  --sidebar-primary: hsl(15, 41%, 50%);
+  --sidebar-primary-foreground: hsl(47, 100%, 97%);
+  --sidebar-accent: hsl(47, 100%, 97%);
+  --sidebar-accent-foreground: hsl(15, 41%, 50%);
+  --sidebar-border: hsl(15, 41%, 85%);
+  --sidebar-ring: hsl(15, 41%, 50%);
+  --font-sans: 'Inter', sans-serif;
+  --font-serif: 'Playfair Display', serif;
+  --font-mono: Menlo, monospace;
+  --radius: 1rem;
+  --terracotta: hsl(15, 41%, 50%);
+  --cream: hsl(47, 100%, 97%);
+  --rich-brown: hsl(25, 51%, 27%);
+  --sage: hsl(78, 26%, 58%);
+  --gold: hsl(51, 93%, 57%);
+}
+
+.dark {
+  --background: hsl(25, 51%, 5%);
+  --foreground: hsl(47, 100%, 90%);
+  --card: hsl(25, 51%, 10%);
+  --card-foreground: hsl(47, 100%, 90%);
+  --popover: hsl(25, 51%, 5%);
+  --popover-foreground: hsl(47, 100%, 90%);
+  --primary: hsl(15, 41%, 50%);
+  --primary-foreground: hsl(47, 100%, 97%);
+  --secondary: hsl(25, 51%, 15%);
+  --secondary-foreground: hsl(47, 100%, 90%);
+  --muted: hsl(25, 51%, 15%);
+  --muted-foreground: hsl(47, 20%, 60%);
+  --accent: hsl(25, 51%, 15%);
+  --accent-foreground: hsl(15, 41%, 50%);
+  --destructive: hsl(0, 84%, 60%);
+  --destructive-foreground: hsl(47, 100%, 97%);
+  --border: hsl(25, 51%, 20%);
+  --input: hsl(25, 51%, 15%);
+  --ring: hsl(15, 41%, 50%);
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply font-sans antialiased bg-background text-foreground;
+    scroll-behavior: smooth;
+  }
+
+  .font-display {
+    font-family: var(--font-serif);
+  }
+}
+
+@layer components {
+  .terracotta {
+    color: var(--terracotta);
+  }
+  
+  .bg-terracotta {
+    background-color: var(--terracotta);
+  }
+  
+  .border-terracotta {
+    border-color: var(--terracotta);
+  }
+  
+  .hover\:bg-terracotta:hover {
+    background-color: var(--terracotta);
+  }
+  
+  .cream {
+    color: var(--cream);
+  }
+  
+  .bg-cream {
+    background-color: var(--cream);
+  }
+  
+  .rich-brown {
+    color: var(--rich-brown);
+  }
+  
+  .bg-rich-brown {
+    background-color: var(--rich-brown);
+  }
+  
+  .sage {
+    color: var(--sage);
+  }
+  
+  .bg-sage {
+    background-color: var(--sage);
+  }
+  
+  .gold {
+    color: var(--gold);
+  }
+  
+  .bg-gold {
+    background-color: var(--gold);
+  }
+}
