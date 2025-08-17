@@ -73,14 +73,10 @@
   * {
     @apply border-border;
   }
-
+  
   body {
     @apply font-sans antialiased bg-background text-foreground;
     scroll-behavior: smooth;
-  }
-
-  .font-display {
-    font-family: var(--font-serif);
   }
 }
 
@@ -99,6 +95,7 @@
   
   .hover\:bg-terracotta:hover {
     background-color: var(--terracotta);
+    color: white;
   }
   
   .cream {

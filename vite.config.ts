@@ -21,15 +21,17 @@ export default defineConfig({
       '@assets': path.resolve(__dirname, './public'),
     },
   },
+  base: '/',
   build: {
-    outDir: './dist',
+    outDir: '../dist',
     emptyOutDir: true,
+    sourcemap: false,
     assetsDir: 'assets',
-    sourcemap: true,
+    minify: 'terser',
     rollupOptions: {
       input: {
-        main: path.resolve(__dirname, 'client/index.html'),
-      },
-    },
-  },
+        main: path.resolve(__dirname, 'client/index.html')
+      }
+    }
+  }
 });

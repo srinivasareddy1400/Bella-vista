@@ -6,7 +6,7 @@ import { MapPin, Phone, Mail, Clock, Facebook, Instagram, Twitter } from "lucide
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
-import { useToast } from "@/components/ui/use-toast";
+import { useSimpleToast } from "@/hooks/use-simple-toast";
 import {
   Select,
   SelectContent,
@@ -31,7 +31,7 @@ const contactFormSchema = z.object({
 type ContactFormData = z.infer<typeof contactFormSchema>;
 
 export default function Contact() {
-  const { toast } = useToast();
+  const { showToast, Toast } = useSimpleToast();
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
   
@@ -77,11 +77,7 @@ export default function Contact() {
       }, 5000);
     } catch (error) {
       console.error('Form submission error:', error);
-      toast({
-        title: "Something went wrong",
-        description: "Please try again later",
-        variant: "destructive",
-      });
+      showToast("Something went wrong. Please try again later.", "error");
     } finally {
       setIsSubmitting(false);
     }
@@ -322,6 +318,7 @@ export default function Contact() {
           </div>
         </div>
       </div>
+      <Toast />
     </section>
   );
 }

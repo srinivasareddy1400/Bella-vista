@@ -15,6 +15,7 @@
     "isolatedModules": true,
     "noEmit": true,
     "jsx": "react-jsx",
+    "jsxImportSource": "react",
     "baseUrl": ".",
     "paths": {
       "@/*": ["./client/src/*"],
@@ -22,5 +23,7 @@
       "@assets/*": ["./public/*"]
     },
     "types": ["vite/client"]
-  }
+  },
+  "include": ["client/src"],
+  "exclude": ["node_modules", "dist"]
 }
